@@ -42,7 +42,7 @@ export class AppComponent {
 
     return undefined;
   }
-  title = 'lock-your-screen';
+  title = 'Lock your screen!';
 }
 
 export type OS = 'macOS' | 'Windows' | 'Android' | 'iOS' | 'Linux'
