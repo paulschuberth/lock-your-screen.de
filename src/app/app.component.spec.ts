@@ -100,5 +100,11 @@ describe('AppComponent', () => {
     expect(actual).toBe('Unknown');
   });
 
+  it(`has correct repo link`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.repoLink).toEqual('https://github.com/paulschuberth/lock-your-screen.de')
+  });
+
 
 });
