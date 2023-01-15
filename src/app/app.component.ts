@@ -7,6 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  title = 'Lock your screen!';
+  repoLink = "https://github.com/paulschuberth/lock-your-screen.de"
+
   lockScreenShortCut(forOs: OS|undefined): string {
     switch (forOs) {
       case 'Windows': return 'Windows Key + L';
@@ -42,7 +45,6 @@ export class AppComponent {
 
     return undefined;
   }
-  title = 'Lock your screen!';
 }
 
 export type OS = 'macOS' | 'Windows' | 'Android' | 'iOS' | 'Linux'
