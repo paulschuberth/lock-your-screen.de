@@ -29,3 +29,20 @@ jobs:
     - run: npm ci --save-dev
     - run: npx ng test --browsers ChromeHeadless --watch false
 
+  deploy:
+    needs:
+      - build
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'push' }}
+    environment:
+      name: ${{ inputs.environment }}
+      url: ${{ needs.select-environment.outputs.url }}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Deploy
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ vars.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSHKEY }}
+          script: 'cd "${{ vars.PROJECT_LOCATION }}" && ./.scripts/deploy.sh'
