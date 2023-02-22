@@ -16,7 +16,7 @@ export class AppComponent {
       case 'Android':
       case 'iOS': return 'Lock button';
       case 'Linux': return 'Ctrl + Alt + L';
-      case 'macOS': return 'Ctrl + Command + Q';
+      case 'macOS': return '⌃ + ⌘ + Q';
       default: return 'Unknown';
     }
   }
