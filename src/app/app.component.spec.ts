@@ -85,7 +85,7 @@ describe('AppComponent', () => {
   it('returns correct screen lock shortcut for macOS', () => {
     const component = new AppComponent();
     const actual = component.lockScreenShortCut('macOS');
-    expect(actual).toBe('Ctrl + Command + Q');
+    expect(actual).toBe('⌃ + ⌘ + Q');
   });
 
   it('returns correct screen lock shortcut for Linux', () => {
