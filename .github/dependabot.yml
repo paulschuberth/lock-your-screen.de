@@ -10,6 +10,5 @@ updates:
     schedule:
       interval: "monthly"
     groups:
-    angular:
-      patterns:
-      - "@angular*"
+      angular:
+        patterns: ["@angular*"]
