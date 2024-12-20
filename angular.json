@@ -59,10 +59,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "lock-your-screen:build:production"
+              "buildTarget": "lock-your-screen:build:production"
             },
             "development": {
-              "browserTarget": "lock-your-screen:build:development"
+              "buildTarget": "lock-your-screen:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -70,7 +70,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "lock-your-screen:build"
+            "buildTarget": "lock-your-screen:build"
           }
         },
         "test": {
